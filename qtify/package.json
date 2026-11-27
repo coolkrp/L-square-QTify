@@ -30,6 +30,9 @@
       "react-app/jest"
     ]
   },
+  "overrides": {
+    "source-map": "0.7.6"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
