@@ -1,21 +1,23 @@
 import React from "react";
 import styles from "./Hero.module.css";
+import heroHeadphones from "../../assets/hero_headphones.png";
 
 function Hero() {
   return (
-    <div className={styles.hero}>
-      <div>
-        <h1>100 Thousand Songs, ad-free</h1>
-        <h1>Over thousands podcast episodes</h1>
-      </div>
-      <div>
+    <section className={styles.hero}>
+      <div className={styles.content}>
+        <h1 className={styles.heading}>
+          <span className={styles.line}>100 Thousand Songs, free</span>
+          <span className={styles.line}>Over thousands podcast episodes</span>
+        </h1>
         <img
-          src={require("../../assets/hero_headphones.png")}
+          className={styles.image}
+          src={heroHeadphones}
           width={212}
           alt="headphones"
         />
       </div>
-    </div>
+    </section>
   );
 }
 

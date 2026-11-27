@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Search.module.css";
 import { ReactComponent as SearchIcon } from "../../assets/search-icon.svg";
-import useAutocomplete from "@mui/base/useAutocomplete";
+import { useAutocomplete } from "@mui/base/useAutocomplete";
 import { styled } from "@mui/system";
 import { truncate } from "../../helpers/helpers";
 import { useNavigate } from "react-router-dom";
@@ -14,7 +14,7 @@ const Listbox = styled("ul")(({ theme }) => ({
   position: "absolute",
   borderRadius: "0px 0px 10px 10px",
   border: "1px solid var(--color-primary)",
-  top: 60,
+  top: 48,
   height: "max-content",
   maxHeight: "500px",
   zIndex: 10,
@@ -60,14 +60,14 @@ function Search({ searchData, placeholder }) {
   };
 
   return (
-    <div style={{ position: "relative" }}>
+    <div className={styles.container}>
       <form
         className={styles.wrapper}
         onSubmit={(e) => {
           onSubmit(e, value);
         }}
       >
-        <div {...getRootProps()}>
+        <div className={styles.inputWrapper} {...getRootProps()}>
           <input
             name="album"
             className={styles.search}
@@ -76,7 +76,7 @@ function Search({ searchData, placeholder }) {
             {...getInputProps()}
           />
         </div>
-        <div>
+        <div className={styles.buttonWrapper}>
           <button className={styles.searchButton} type="submit">
             <SearchIcon />
           </button>
