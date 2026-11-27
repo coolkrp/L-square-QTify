@@ -4,20 +4,15 @@ import heroHeadphones from "../../assets/hero_headphones.png";
 
 function Hero() {
   return (
-    <section className={styles.hero}>
-      <div className={styles.content}>
-        <h1 className={styles.heading}>
-          <span className={styles.line}>100 Thousand Songs, free</span>
-          <span className={styles.line}>Over thousands podcast episodes</span>
-        </h1>
-        <img
-          className={styles.image}
-          src={heroHeadphones}
-          width={212}
-          alt="headphones"
-        />
+    <div className={styles.hero}>
+      <div>
+        <h1>100 Thousand Songs, ad-free</h1>
+        <h1>Over thousands podcast episodes</h1>
       </div>
-    </section>
+      <div>
+        <img src={heroHeadphones} width={212} alt="headphones" />
+      </div>
+    </div>
   );
 }
 
