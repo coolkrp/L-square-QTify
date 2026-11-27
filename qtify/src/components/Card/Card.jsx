@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Card.module.css";
 import { Chip, Tooltip } from "@mui/material";
+import { MusicContext } from "../../context/MusicContext";
 
 function Card({ data, type }) {
+  const { playSong } = useContext(MusicContext);
+
   const getCard = (type) => {
     switch (type) {
       case "album": {
@@ -32,7 +35,17 @@ function Card({ data, type }) {
         const likes = data.likes ?? data.follows ?? 0;
 
         return (
-          <div className={styles.wrapper}>
+          <div
+            className={`${styles.wrapper} ${styles.songCard}`}
+            onClick={() => playSong(data)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                playSong(data);
+              }
+            }}
+            role="button"
+            tabIndex={0}
+          >
             <div className={styles.card}>
               <img src={image} alt="song" />
               <div className={styles.banner}>
@@ -52,7 +65,7 @@ function Card({ data, type }) {
         );
       }
       default:
-        return <></>;
+        return null;
     }
   };
   return getCard(type);

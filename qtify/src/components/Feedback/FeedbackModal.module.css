@@ -1,0 +1,35 @@
+.form {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  color: var(--color-white) !important;
+}
+
+.submit {
+  background-color: var(--color-primary) !important;
+  color: var(--color-black) !important;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}

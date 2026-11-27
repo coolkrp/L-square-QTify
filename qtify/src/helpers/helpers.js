@@ -1,1 +1,7 @@
-404: Not Found
+export function truncate(str, length) {
+  if (!str) return "";
+  if (str.length > length) {
+    return `${str.substring(0, length)}...`;
+  }
+  return str;
+}

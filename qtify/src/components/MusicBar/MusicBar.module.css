@@ -1,0 +1,65 @@
+.bar {
+  height: 15vh;
+  min-height: 96px;
+  border-top: 2px solid grey;
+  position: sticky;
+  bottom: 0;
+  background-color: var(--color-black);
+  z-index: 3000;
+  display: flex;
+  width: 100%;
+}
+
+.info {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 2%;
+  gap: 10px;
+}
+
+.info img {
+  width: 10vh;
+  height: 10vh;
+  max-width: 72px;
+  max-height: 72px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.songTitle {
+  color: var(--color-white);
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.artists {
+  color: #bdbdbd;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+
+.playArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.playButton {
+  background-color: var(--color-black);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progressWrap {
+  width: min(60%, 480px);
+}
